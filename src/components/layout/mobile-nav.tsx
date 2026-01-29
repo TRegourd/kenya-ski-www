@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { createPortal } from "react-dom"
 import Link from "next/link"
 import { X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
@@ -14,6 +15,12 @@ interface MobileNavProps {
 }
 
 export function MobileNav({ isOpen, onClose, items }: MobileNavProps) {
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
   React.useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden"
@@ -25,7 +32,9 @@ export function MobileNav({ isOpen, onClose, items }: MobileNavProps) {
     }
   }, [isOpen])
 
-  return (
+  if (!mounted) return null
+
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
         <>
@@ -35,7 +44,7 @@ export function MobileNav({ isOpen, onClose, items }: MobileNavProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
+            className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm"
           />
           
           {/* Panel */}
@@ -44,7 +53,8 @@ export function MobileNav({ isOpen, onClose, items }: MobileNavProps) {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-y-0 right-0 z-50 w-full max-w-xs bg-background p-6 shadow-xl border-l sm:max-w-sm"
+            style={{ backgroundColor: '#ffffff' }}
+            className="fixed inset-y-0 right-0 z-[101] w-full max-w-xs p-6 shadow-xl border-l sm:max-w-sm"
           >
             <div className="flex items-center justify-between mb-8">
               <span className="text-xl font-bold">Menu</span>
@@ -74,6 +84,7 @@ export function MobileNav({ isOpen, onClose, items }: MobileNavProps) {
           </motion.div>
         </>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   )
 }
