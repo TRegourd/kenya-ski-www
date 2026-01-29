@@ -10,8 +10,8 @@ import { Container } from "@/components/ui/container"
 import { MobileNav } from "@/components/layout/mobile-nav"
 
 const navItems = [
+  { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Partners", href: "/partners" },
   { name: "Contact", href: "/contact" },
 ]
 
@@ -20,9 +20,13 @@ export function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false)
   const pathname = usePathname()
 
+  // For the new Hero design (Split), the header sits on a white/light background.
+  // So we default to dark text. 
+  // However, on scroll, we want a solid glass effect.
+
   React.useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+      setIsScrolled(window.scrollY > 20)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -35,36 +39,62 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-300",
+        "fixed top-0 z-50 w-full transition-all duration-300",
         isScrolled
-          ? "bg-background/80 backdrop-blur-md border-b shadow-sm py-2"
-          : "bg-transparent py-4"
+          ? "bg-white/80 backdrop-blur-md border-b shadow-sm py-3"
+          : "bg-transparent py-5"
       )}
     >
       <Container className="flex items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <div className="size-8 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-xl">K</span>
+        <Link href="/" className="flex items-center gap-3 group">
+          {/* Logo Mark */}
+          <div className="relative size-10 flex items-center justify-center bg-black rounded-lg overflow-hidden shadow-md group-hover:shadow-lg transition-all">
+             {/* Abstract Tricolor Accent inside the logo box for distinctiveness */}
+             <div className="absolute inset-x-0 top-0 h-1/3 bg-black" />
+             <div className="absolute inset-x-0 top-1/3 h-1/3 bg-[#BB0000]" /> {/* Kenyan Red */}
+             <div className="absolute inset-x-0 bottom-0 h-1/3 bg-[#006600]" /> {/* Kenyan Green */}
+             
+             {/* The "K" sits on top */}
+             <span className="relative z-10 text-white font-black text-xl tracking-tighter">K</span>
           </div>
-          <span className="font-bold text-xl hidden sm:inline-block">Kenya</span>
+
+          <div className="flex flex-col justify-center">
+            <span className={cn("font-bold text-lg leading-none tracking-tight", isScrolled ? "text-foreground" : "text-foreground")}>
+              Kenya Ski
+            </span>
+            <span className={cn("text-xs font-medium tracking-widest uppercase opacity-70", isScrolled ? "text-muted-foreground" : "text-muted-foreground")}>
+              Federation
+            </span>
+          </div>
         </Link>
         
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
+                "text-sm font-medium transition-colors hover:text-primary relative group",
                 pathname === item.href
-                  ? "text-primary"
+                  ? "text-primary font-semibold"
                   : "text-muted-foreground"
               )}
             >
               {item.name}
+              {/* Animated underline */}
+              <span className={cn(
+                  "absolute -bottom-1 left-0 w-full h-[2px] bg-primary scale-x-0 transition-transform origin-left group-hover:scale-x-100", 
+                  pathname === item.href ? "scale-x-100" : ""
+              )}/>
             </Link>
           ))}
-          <Button size="sm">Get Started</Button>
+          
+          <div className="hidden lg:block w-px h-6 bg-border mx-2" />
+
+          {/* Minimal Support link instead of SaaS button */}
+          <Link href="/contact" className="text-sm font-semibold text-primary hover:text-primary/80 transition-colors">
+            Support the Team
+          </Link>
         </nav>
 
         <Button
@@ -73,7 +103,7 @@ export function Header() {
           className="md:hidden"
           onClick={() => setIsOpen(true)}
         >
-          <Menu className="size-5" />
+          <Menu className="size-6" />
           <span className="sr-only">Toggle menu</span>
         </Button>
       </Container>

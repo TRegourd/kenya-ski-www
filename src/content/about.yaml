@@ -1,0 +1,13 @@
+heroTitle: About the Kenya Ski Federation
+heroSubtitle: The official governing body dedicated to developing winter sports talent in Kenya and representing our nation on the global stage.
+mission: "To identify, train, and support Kenyan athletes in Alpine and Nordic skiing disciplines, fostering a culture of excellence and sportsmanship that inspires the next generation of winter olympians. We are committed to providing world-class training facilities, expert coaching, and pathways for our athletes to compete at the highest international levels. Through our efforts, we aim to put Kenya on the map as a formidable contender in winter sports, challenging stereotypes and breaking barriers.\n\nOur mission extends beyond the slopes. We strive to build a community that values discipline, resilience, and the relentless pursuit of greatness. By engaging with youth and promoting winter sports within Kenya and the diaspora, we are cultivating a legacy that will endure for generations to come."
+programs:
+  - title: Athlete Development
+    description: Comprehensive training camps and coaching for elite and developmental skiers.
+    icon: Trophy
+  - title: Youth Engagement
+    description: Introducing winter sports to Kenyan youth through roller skiing and dry-land training.
+    icon: Users
+  - title: Governance & Safety
+    description: Ensuring safe, fair, and ethical participation in all competitions.
+    icon: Shield

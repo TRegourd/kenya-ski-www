@@ -1,4 +1,4 @@
-import { config, fields, singleton } from '@keystatic/core';
+import { config, fields, singleton, collection } from '@keystatic/core';
 
 export default config({
   storage: {
@@ -75,21 +75,7 @@ export default config({
           ),
         }, { label: 'Testimonials Section' }),
 
-        faq: fields.object({
-          title: fields.text({ label: 'Section Title' }),
-          items: fields.array(
-            fields.object({
-              question: fields.text({ label: 'Question' }),
-              answer: fields.document({
-                label: 'Answer',
-                formatting: true,
-                dividers: true,
-                links: true,
-              }),
-            }),
-            { label: 'FAQ Items' }
-          ),
-        }, { label: 'FAQ Section' }),
+
 
         cta: fields.object({
           title: fields.text({ label: 'Title' }),
@@ -98,6 +84,63 @@ export default config({
           buttonLink: fields.text({ label: 'Button Link' }),
         }, { label: 'Final CTA Section' }),
       },
+    }),
+    about: singleton({
+      label: 'About Page',
+      path: 'src/content/about',
+      schema: {
+        heroTitle: fields.text({ label: 'Hero Title' }),
+        heroSubtitle: fields.text({ label: 'Hero Subtitle', multiline: true }),
+        mission: fields.text({ 
+            label: 'Mission Statement', 
+            multiline: true 
+        }),
+
+        programs: fields.array(
+            fields.object({
+                title: fields.text({ label: 'Program Title' }),
+                description: fields.text({ label: 'Description', multiline: true }),
+                icon: fields.text({ label: 'Icon Name (Lucide)' }),
+            }),
+            { label: 'Programs' }
+        ),
+      },
+    }),
+  },
+  collections: {
+    teamMembers: collection({
+        label: 'Team Members',
+        slugField: 'name',
+        path: 'src/content/team/*',
+        schema: {
+            name: fields.slug({ name: { label: 'Name' } }),
+            role: fields.text({ label: 'Role' }),
+            bio: fields.text({ label: 'Bio', multiline: true }),
+            avatar: fields.image({
+                label: 'Avatar',
+                directory: 'public/images/team',
+                publicPath: '/images/team',
+            }),
+            order: fields.number({ label: 'Sort Order', defaultValue: 0 }),
+            linkedinUrl: fields.text({ label: 'LinkedIn URL' }),
+            email: fields.text({ label: 'Email' }),
+        },
+    }),
+    faqs: collection({
+        label: 'FAQs',
+        slugField: 'question',
+        path: 'src/content/faqs/*',
+        schema: {
+            question: fields.slug({ name: { label: 'Question' } }),
+            answer: fields.document({
+                label: 'Answer',
+                formatting: true,
+                dividers: true,
+                links: true,
+            }),
+            order: fields.number({ label: 'Sort Order', defaultValue: 0 }),
+            isPublished: fields.checkbox({ label: 'Published', defaultValue: true }),
+        },
     }),
   },
 });

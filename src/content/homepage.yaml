@@ -1,58 +1,51 @@
 hero:
-  headline: Build Better Web Experiences
-  subheadline: >-
-    A premium Next.js template designed for modern startups and agencies. Ship
-    faster with a complete design system and clean architecture.
-  primaryCtaText: Get Started
+  headline: Building Kenya’s Future in Winter Sports
+  subheadline: The Kenya Ski Federation is dedicated to discovering and training the next generation of Alpine and Nordic champions.
+  primaryCtaText: Contact the Federation
   primaryCtaLink: /contact
-  secondaryCtaText: View Components
-  secondaryCtaLink: /components
+  secondaryCtaText: About the Federation
+  secondaryCtaLink: /about
 partners:
-  show: true
-  title: Trusted by industry leaders
+  show: false
+  title: Supported by
   logos: []
 features:
-  title: Crafted for Excellence
-  subtitle: Everything you need to build a world-class website.
+  title: Our Mission
+  subtitle: Paving the way for the next generation of winter olympians.
   items:
-    - title: Modern Tech Stack
-      description: Built with Next.js 14, TypeScript, and Tailwind CSS.
-      icon: Zap
-    - title: Design System
-      description: Comprehensive tokens, accessible primitives, and consistent spacing.
-      icon: Layout
-    - title: CMS Integrated
-      description: Manage your content easily with local-first Keystatic CMS.
-      icon: Database
+    - title: Athlete Development
+      description: Comprehensive training programs for Alpine and Nordic skiing disciplines.
+      icon: Trophy
+    - title: Global Representation
+      description: Proudly flying the Kenyan flag at Winter Olympics and World Championships.
+      icon: Flag
+    - title: Community Outreach
+      description: Engaging Kenyans locally and abroad to build a vibrant winter sports culture.
+      icon: Users
 stats:
   show: true
   items:
-    - value: 10k+
-      label: Downloads
-    - value: 99%
-      label: Happiness Score
-    - value: 24/7
-      label: Global Support
+    - value: "12"
+      label: Elite Athletes
+    - value: "3"
+      label: Winter Olympics
+    - value: "150+"
+      label: Training Days/Year
 testimonials:
-  title: Loved by Developers
+  title: Voices from the Slopes
   items:
     - quote: >-
-        This template saved us weeks of development time. The code quality is
-        outstanding and the design is simply beautiful.
-      author: Sarah Johnson
-      role: CTO at TechFlow
+        Representing Kenya is not just about competing; it's about showing the world
+        that we belong on the snow.
+      author: Sabrina Wanjiku Simader
+      role: Alpine Skier
     - quote: >-
-        Finally a template that puts architecture first. Clean separation of
-        concerns and easy to customize.
-      author: Mark Davies
-      role: Senior Frontend Dev
-faq:
-  title: Frequently Asked Questions
-  items:
-    - question: Is this template compatible with Next.js 15?
-    - question: Can I use it for commercial projects?
+        The Federation has provided the structure and support needed to turn dreams
+        into professional careers.
+      author: Dennis Omondi
+      role: Cross-Country Skier
 cta:
-  title: Ready to Start?
-  subtitle: Join thousands of developers building the future.
-  buttonText: Get the Template
-  buttonLink: /buy
+  title: Join Our Journey
+  subtitle: Help us make history on the slopes.
+  buttonText: Contact the Federation
+  buttonLink: /contact

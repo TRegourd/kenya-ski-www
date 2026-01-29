@@ -1,4 +1,4 @@
-import { getHomepageData } from "@/lib/content/reader"
+import { getHomepageData, getFAQs } from "@/lib/content/reader"
 import { HeroSection } from "@/components/sections/hero"
 import { PartnersSection } from "@/components/sections/partners"
 import { FeaturesSection } from "@/components/sections/features"
@@ -10,7 +10,12 @@ import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 
 export default async function Home() {
-  const data = await getHomepageData()
+  const [data, faqs] = await Promise.all([
+    getHomepageData(),
+    getFAQs()
+  ])
+
+
 
   if (!data) {
     return <div>No content found. Please update the CMS.</div>
@@ -34,7 +39,7 @@ export default async function Home() {
         
         <TestimonialsSection data={data.testimonials} />
         
-        <FAQSection data={data.faq} />
+        <FAQSection items={faqs} />
         
         <CTASection data={data.cta} />
       </main>
