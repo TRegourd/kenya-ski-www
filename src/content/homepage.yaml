@@ -1,0 +1,58 @@
+hero:
+  headline: Build Better Web Experiences
+  subheadline: >-
+    A premium Next.js template designed for modern startups and agencies. Ship
+    faster with a complete design system and clean architecture.
+  primaryCtaText: Get Started
+  primaryCtaLink: /contact
+  secondaryCtaText: View Components
+  secondaryCtaLink: /components
+partners:
+  show: true
+  title: Trusted by industry leaders
+  logos: []
+features:
+  title: Crafted for Excellence
+  subtitle: Everything you need to build a world-class website.
+  items:
+    - title: Modern Tech Stack
+      description: Built with Next.js 14, TypeScript, and Tailwind CSS.
+      icon: Zap
+    - title: Design System
+      description: Comprehensive tokens, accessible primitives, and consistent spacing.
+      icon: Layout
+    - title: CMS Integrated
+      description: Manage your content easily with local-first Keystatic CMS.
+      icon: Database
+stats:
+  show: true
+  items:
+    - value: 10k+
+      label: Downloads
+    - value: 99%
+      label: Happiness Score
+    - value: 24/7
+      label: Global Support
+testimonials:
+  title: Loved by Developers
+  items:
+    - quote: >-
+        This template saved us weeks of development time. The code quality is
+        outstanding and the design is simply beautiful.
+      author: Sarah Johnson
+      role: CTO at TechFlow
+    - quote: >-
+        Finally a template that puts architecture first. Clean separation of
+        concerns and easy to customize.
+      author: Mark Davies
+      role: Senior Frontend Dev
+faq:
+  title: Frequently Asked Questions
+  items:
+    - question: Is this template compatible with Next.js 15?
+    - question: Can I use it for commercial projects?
+cta:
+  title: Ready to Start?
+  subtitle: Join thousands of developers building the future.
+  buttonText: Get the Template
+  buttonLink: /buy
