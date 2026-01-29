@@ -18,7 +18,11 @@ export async function sendContactEmail(data: ContactFormValues) {
     const emaildata = await resend.emails.send({
       from: fromEmail,
       to: adminEmail,
-      replyTo: email,
+      // Prevent header injection by removing newlines and control characters
+      replyTo: email
+        .replace(/[\r\n\t\0\x00-\x1F\x7F]/g, "")
+        .trim()
+        .slice(0, 254), // RFC 5321 max email length
       subject: `New Contact Form Submission: ${subject || 'No Subject'} - from ${name}`,
       text: `
 Name: ${name}

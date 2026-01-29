@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
 
     if (!turnstileData.success) {
       return NextResponse.json(
-        { message: "Invalid security token. Please reload and try again." },
+        { message: "Security check failed." },
         { status: 400 }
       )
     }

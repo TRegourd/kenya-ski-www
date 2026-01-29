@@ -8,7 +8,7 @@ const cspHeader = `
   form-action 'self';
   frame-ancestors 'self';
   object-src 'none';
-  upgrade-insecure-requests;
+  ${!isDev ? "upgrade-insecure-requests;" : ""}
   script-src 'self' 'unsafe-inline' ${isDev ? "'unsafe-eval'" : ""} https://challenges.cloudflare.com;
   style-src 'self' 'unsafe-inline';
   img-src 'self' blob: data:;
