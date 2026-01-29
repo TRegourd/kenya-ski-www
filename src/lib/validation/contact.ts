@@ -11,8 +11,8 @@ export const contactFormSchema = z.object({
   message: z.string().min(10, {
     message: "Message must be at least 10 characters.",
   }),
-  consent: z.boolean().refine(val => val === true, {
-    message: "You must agree to the privacy policy.",
+  token: z.string().min(1, {
+    message: "Please complete the security challenge.",
   }),
 })
 

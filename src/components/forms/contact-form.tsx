@@ -1,9 +1,11 @@
 "use client"
 
-import { useState } from "react"
+
+import { useState, useRef } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Loader2 } from "lucide-react"
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -31,9 +33,11 @@ export function ContactForm() {
       email: "",
       subject: "",
       message: "",
-      consent: false,
+      token: "",
     },
   })
+
+  const turnstileRef = useRef<TurnstileInstance>(null)
 
   async function onSubmit(data: ContactFormValues) {
     setErrorMessage(null)
@@ -56,6 +60,8 @@ export function ContactForm() {
     } catch (error) {
        console.error(error)
       setErrorMessage(error instanceof Error ? error.message : "Something went wrong")
+      // Reset Turnstile on error
+      turnstileRef.current?.reset()
     }
   }
 
@@ -142,29 +148,25 @@ export function ContactForm() {
           )}
         />
 
-        <FormField
-          control={form.control}
-          name="consent"
-          render={({ field }) => (
-            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
-              <FormControl>
-                <Checkbox
-                  checked={field.value}
-                  onCheckedChange={field.onChange}
-                />
-              </FormControl>
-              <div className="space-y-1 leading-none">
-                <FormLabel>
-                  I agree to the storage and processing of my personal data.
-                </FormLabel>
-                <FormDescription>
-                  We only use this to respond to your inquiry.
-                </FormDescription>
-                <FormMessage />
-              </div>
-            </FormItem>
-          )}
-        />
+        <div className="flex justify-center">
+          <Turnstile
+            ref={turnstileRef}
+            siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
+            onSuccess={(token) => {
+              form.setValue("token", token)
+              form.clearErrors("token")
+            }}
+            options={{
+              theme: "light",
+            }}
+          />
+        </div>
+        
+        {form.formState.errors.token && (
+          <p className="text-sm font-medium text-destructive text-center">
+            {form.formState.errors.token.message}
+          </p>
+        )}
 
         <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
           {form.formState.isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}

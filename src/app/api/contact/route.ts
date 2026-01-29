@@ -41,6 +41,29 @@ export async function POST(req: NextRequest) {
     const json = await req.json()
     const body = contactFormSchema.parse(json)
 
+    // Verify Turnstile Token
+    const formData = new FormData()
+    formData.append("secret", process.env.TURNSTILE_SECRET_KEY || "")
+    formData.append("response", body.token)
+    formData.append("remoteip", ip)
+
+    const turnstileResponse = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        body: formData,
+      }
+    )
+
+    const turnstileData = await turnstileResponse.json()
+
+    if (!turnstileData.success) {
+      return NextResponse.json(
+        { message: "Invalid security token. Please reload and try again." },
+        { status: 400 }
+      )
+    }
+
     const result = await sendContactEmail(body)
 
     if (!result.success) {
