@@ -89,7 +89,7 @@ export function HeroSection({ data }: HeroSectionProps) {
 
            <div className="relative aspect-[4/5] w-full rounded-[2rem] overflow-hidden shadow-2xl border border-white/20 select-none">
               <Image 
-                src="/images/hero/alpine-hero.png"
+                src="/images/hero/issa-hero.jpeg"
                 alt="Kenyan Alpine Skier in action"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
@@ -100,18 +100,7 @@ export function HeroSection({ data }: HeroSectionProps) {
               {/* Subtle inner gradient overlay for image depth */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
               
-              {/* Floating Badge on Image */}
-              <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/40">
-                 <div className="flex items-center justify-between">
-                    <div>
-                       <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-0.5">Focus</p>
-                       <p className="text-sm font-semibold text-foreground">Next Gen Winter Olympians</p>
-                    </div>
-                    <div className="size-10 bg-black rounded-lg flex items-center justify-center text-white font-bold">
-                       KE
-                    </div>
-                 </div>
-              </div>
+
            </div>
         </div>
         

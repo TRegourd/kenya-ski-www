@@ -21,7 +21,7 @@ export function Counter({
   const ref = useRef<HTMLSpanElement>(null)
   const motionValue = useMotionValue(direction === "down" ? value : 0)
   const springValue = useSpring(motionValue, {
-    damping: 50,
+    damping: 30,
     stiffness: 100,
   })
   const isInView = useInView(ref, { once: true, margin: "0px" })
@@ -36,7 +36,7 @@ export function Counter({
     springValue.on("change", (latest) => {
       if (ref.current) {
         ref.current.textContent = Intl.NumberFormat("en-US").format(
-          Math.floor(latest)
+          Math.round(latest)
         )
       }
     })
