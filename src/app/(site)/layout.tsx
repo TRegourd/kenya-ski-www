@@ -13,8 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kenya Ski Federation | Official Website",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_URL || "https://www.kenyaski.com"),
+  title: {
+    default: "Kenya Ski Federation | Official Website",
+    template: "%s | Kenya Ski Federation"
+  },
   description: "The official body governing and developing Alpine and Nordic skiing in Kenya. Supporting athletes on the road to the Winter Olympics.",
+  alternates: {
+    canonical: './',
+  },
   openGraph: {
     title: "Kenya Ski Federation",
     description: "Developing world-class winter sports athletes from the Savannah to the Slopes.",
@@ -22,6 +29,10 @@ export const metadata: Metadata = {
     locale: "en_KE",
     siteName: "Kenya Ski Federation",
   },
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 export default function RootLayout({
