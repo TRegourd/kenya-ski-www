@@ -22,12 +22,25 @@ export const metadata: Metadata = {
   alternates: {
     canonical: './',
   },
+  icons: {
+    icon: '/images/logo.jpg',
+    shortcut: '/images/logo.jpg',
+    apple: '/images/logo.jpg',
+  },
   openGraph: {
     title: "Kenya Ski Federation",
     description: "Developing world-class winter sports athletes from the Savannah to the Slopes.",
     type: "website",
     locale: "en_KE",
     siteName: "Kenya Ski Federation",
+    images: [
+      {
+        url: '/images/logo.jpg',
+        width: 800,
+        height: 800,
+        alt: 'Kenya Ski Federation Logo',
+      },
+    ],
   },
   robots: {
     index: true,

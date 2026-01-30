@@ -3,6 +3,8 @@ import { Facebook, Twitter, Instagram, Mail, MapPin } from "lucide-react"
 import { Container } from "@/components/ui/container"
 
 
+import Image from "next/image"
+
 export function Footer() {
   return (
     <footer className="bg-muted/30 border-t pt-16 pb-8">
@@ -11,8 +13,13 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="size-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">K</span>
+              <div className="relative size-12 rounded-lg overflow-hidden shrink-0">
+                 <Image 
+                   src="/images/logo.jpg" 
+                   alt="Kenya Ski Federation Logo" 
+                   fill 
+                   className="object-cover"
+                 />
               </div>
               <span className="font-bold text-xl">Kenya Ski Federation</span>
             </Link>

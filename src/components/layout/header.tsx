@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils/cn"
 import { Button } from "@/components/ui/button"
 import { Container } from "@/components/ui/container"
 import { MobileNav } from "@/components/layout/mobile-nav"
+import Image from "next/image"
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -48,14 +49,13 @@ export function Header() {
       <Container className="flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           {/* Logo Mark */}
-          <div className="relative size-10 flex items-center justify-center bg-black rounded-lg overflow-hidden shadow-md group-hover:shadow-lg transition-all">
-             {/* Abstract Tricolor Accent inside the logo box for distinctiveness */}
-             <div className="absolute inset-x-0 top-0 h-1/3 bg-black" />
-             <div className="absolute inset-x-0 top-1/3 h-1/3 bg-[#BB0000]" /> {/* Kenyan Red */}
-             <div className="absolute inset-x-0 bottom-0 h-1/3 bg-[#006600]" /> {/* Kenyan Green */}
-             
-             {/* The "K" sits on top */}
-             <span className="relative z-10 text-white font-black text-xl tracking-tighter">K</span>
+          <div className="relative size-12 flex items-center justify-center rounded-lg overflow-hidden shadow-md group-hover:shadow-lg transition-all">
+             <Image 
+               src="/images/logo.jpg" 
+               alt="Kenya Ski Federation Logo" 
+               fill 
+               className="object-cover"
+             />
           </div>
 
           <div className="flex flex-col justify-center">
