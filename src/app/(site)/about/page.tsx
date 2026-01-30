@@ -87,13 +87,15 @@ export default async function AboutPage() {
         </Section>
 
         {/* Team Section */}
-        <TeamSection members={sortedTeam.map(member => ({
-            ...member,
-            avatar: member.avatar ?? undefined,
-            bio: member.bio ?? undefined,
-            linkedinUrl: member.linkedinUrl ?? undefined,
-            email: member.email ?? undefined
-        }))} />
+        {process.env.ENABLE_TEAM_MEMBERS !== 'false' && (
+          <TeamSection members={sortedTeam.map(member => ({
+              ...member,
+              avatar: member.avatar ?? undefined,
+              bio: member.bio ?? undefined,
+              linkedinUrl: member.linkedinUrl ?? undefined,
+              email: member.email ?? undefined
+          }))} />
+        )}
         
         {/* CTA */}
         <Section className="bg-primary text-primary-foreground text-center">

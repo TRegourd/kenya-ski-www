@@ -75,11 +75,6 @@ export function MobileNav({ isOpen, onClose, items }: MobileNavProps) {
                   {item.name}
                 </Link>
               ))}
-              <div className="mt-4 pt-4 border-t">
-                <Button className="w-full" size="lg">
-                  Get Started
-                </Button>
-              </div>
             </nav>
           </motion.div>
         </>

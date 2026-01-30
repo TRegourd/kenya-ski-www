@@ -36,11 +36,11 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
                <li className="flex items-center text-muted-foreground space-x-2">
                  <MapPin className="size-4" />
-                 <span>Nairobi, Kenya</span>
+                 <span>300100-2299 Eldoret, Kenya</span>
                </li>
                <li className="flex items-center text-muted-foreground space-x-2">
                  <Mail className="size-4" />
-                 <a href="mailto:info@kenyaskifederation.org" className="hover:text-foreground">info@kenyaskifederation.org</a>
+                 <Link href="/contact" className="hover:text-foreground">Email Us</Link>
                </li>
             </ul>
           </div>
