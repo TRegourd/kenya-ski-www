@@ -46,7 +46,7 @@ export function TeamMemberCard({
           {role}
         </Badge>
         {bio && (
-          <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
+          <p className="text-sm text-muted-foreground mb-4">
             {bio}
           </p>
         )}
