@@ -59,9 +59,8 @@ export function Footer() {
             © {new Date().getFullYear()} Kenya Ski Federation. All rights reserved.
           </p>
           <div className="flex gap-4 text-muted-foreground">
-            <Link href="#" className="hover:text-foreground"><Twitter className="size-5" /></Link>
-            <Link href="#" className="hover:text-foreground"><Instagram className="size-5" /></Link>
-            <Link href="#" className="hover:text-foreground"><Facebook className="size-5" /></Link>
+            <Link href="https://www.instagram.com/kenyaski_fe1" target="_blank" rel="noopener noreferrer" className="hover:text-foreground"><Instagram className="size-5" /></Link>
+            <Link href="https://www.facebook.com/people/Kenya-Ski-Federation/61580388507437/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground"><Facebook className="size-5" /></Link>
           </div>
         </div>
       </Container>
