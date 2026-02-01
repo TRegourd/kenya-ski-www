@@ -131,6 +131,14 @@ export default config({
                 publicPath: '/images/team',
             }),
             order: fields.number({ label: 'Sort Order', defaultValue: 0 }),
+            group: fields.select({
+                label: 'Group',
+                options: [
+                    { label: 'Executive Committee', value: 'executive' },
+                    { label: 'Management Team', value: 'management' },
+                ],
+                defaultValue: 'executive',
+            }),
             linkedinUrl: fields.text({ label: 'LinkedIn URL' }),
             email: fields.text({ label: 'Email' }),
         },
