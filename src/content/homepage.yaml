@@ -33,9 +33,9 @@ features:
 stats:
   show: true
   items:
-    - value: '3'
+    - value: "3"
       label: Elite Athletes
-    - value: '2'
+    - value: "2"
       label: Winter Olympics
     - value: 150+
       label: Training Days/Year
@@ -48,16 +48,6 @@ testimonials:
         way for Kenyan athletes to compete on the world's biggest stage.
       author: Issa Gachingiri Laborde
       role: Alpine Skier (2024 Youth Olympic)
-    - quote: >-
-        Taking up skiing without snow shows who we are — Kenyans who rise,
-        adapt, and push forward
-      author: Florence Muriithi
-      role: Secretary
-    - quote: >-
-        Behind every athlete is a system that believes in them. Our mission is
-        to build that system and secure a strong future for Kenyan skiing.
-      author: Pauline Msungu
-      role: Vice President
 cta:
   title: Join Our Journey
   subtitle: Help us make history on the slopes.
