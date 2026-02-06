@@ -106,6 +106,7 @@ export default async function AboutPage() {
               bio: member.bio ?? undefined,
               linkedinUrl: member.linkedinUrl ?? undefined,
               email: member.email ?? undefined,
+              quote: member.quote ?? undefined,
             }))}
           />
         )}
