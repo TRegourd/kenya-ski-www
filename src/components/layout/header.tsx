@@ -13,6 +13,8 @@ import Image from "next/image"
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
+  { name: "Athletes", href: "/athletes" },
+  { name: "Team", href: "/team" },
   { name: "Contact", href: "/contact" },
 ]
 

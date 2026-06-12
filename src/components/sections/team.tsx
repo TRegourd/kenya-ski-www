@@ -1,9 +1,6 @@
 import { Container } from "@/components/ui/container";
 import { TeamMemberCard } from "@/components/cards/team-member-card";
 
-import Link from "next/link";
-import Image from "next/image";
-
 interface TeamMember {
   name: string;
   role: string;
@@ -17,9 +14,10 @@ interface TeamMember {
 
 interface TeamSectionProps {
   members: TeamMember[];
+  showHeader?: boolean;
 }
 
-export function TeamSection({ members }: TeamSectionProps) {
+export function TeamSection({ members, showHeader = true }: TeamSectionProps) {
   // Filter members by group, defaulting to 'executive' if not specified
   const executives = members.filter((m) => !m.group || m.group === "executive");
   const management = members.filter((m) => m.group === "management");
@@ -27,14 +25,17 @@ export function TeamSection({ members }: TeamSectionProps) {
   return (
     <section className="py-16 md:py-24 bg-muted/30">
       <Container>
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-foreground">
-            Meet the Team
-          </h2>
-          <p className="max-w-2xl mx-auto text-lg text-muted-foreground">
-            The dedicated professionals driving Kenya's winter sports success.
-          </p>
-        </div>
+        {showHeader && (
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-foreground">
+              Meet the Team
+            </h2>
+            <p className="max-w-2xl mx-auto text-lg text-muted-foreground">
+              The dedicated professionals driving Kenya&rsquo;s winter sports
+              success.
+            </p>
+          </div>
+        )}
 
         {/* Executive Committee - Large Cards */}
         <div className="mb-16">

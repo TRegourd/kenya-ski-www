@@ -1,0 +1,47 @@
+name: Issa Gachingiri Laborde
+discipline: Alpine Skiing
+tagline: Olympian · Kenya's Flag Bearer, Milano Cortina 2026
+born: 12 March 2007
+basedIn: L'Alpe d'Huez, France
+portrait: /images/athletes/issa-laborde-portrait.jpg
+actionImage: /images/athletes/issa-laborde-action-1.jpg
+shortBio: Raised in the French Alps by a Kenyan mother and a French father, Issa chose to race for Kenya — and at just 18 carried the national flag at the Milano Cortina 2026 opening ceremony, one of the youngest flag bearers in Kenya's Olympic history.
+profile: "Born in 2007 and raised in the alpine resort of L'Alpe d'Huez, Issa was on skis at age four. The son of a Kenyan mother and a French father, he proudly chose to represent Kenya — honoring his maternal heritage and expanding the visibility of winter sports across Africa.\n\nAt 18, he was selected as Kenya's flag bearer at the opening ceremony of the Milano Cortina 2026 Winter Olympics, becoming one of the youngest athletes ever to carry the Kenyan flag at a Winter Games. An ambassador for both his cultures, Issa stands for diversity and opportunity in international sport."
+journey: "Issa entered his first races at four and stood on his first podium at ten. Trained in renowned French clubs, he built a strong technical foundation and deep racing experience across regional and national competitions — before choosing to race internationally for Kenya, driven by pride in his roots and a vision: winter sports are open to athletes from every background."
+clubs:
+  - Alpe d'Huez Ski Club
+  - GUC Grenoble
+  - Chamrousse Ski Club
+  - Vaujany Ski Club
+highlights:
+  - First competitive races at age 4, first podium at age 10
+  - Top 20 on the French Silver Cup circuit
+  - Coq d'Or National Ski Open (2021–2022)
+  - French Junior Second Division Championships
+  - La Scara International Children's World Championships 2023, racing for Kenya
+milestones:
+  - event: Gangwon 2024 Winter Youth Olympic Games
+    details:
+      - First Kenyan male alpine skier ever at the Winter Youth Olympic Games
+  - event: Milano Cortina 2026 Winter Olympic Games — Giant Slalom
+    details:
+      - Flag bearer for Kenya at the Opening Ceremony
+      - Youngest Kenyan athlete to qualify for a second run at a Winter Olympics
+      - 4th highest-placed African athlete in the Giant Slalom
+quotes:
+  - theme: Identity
+    text: Growing up in the French Alps gave me the opportunity to ski at a high level — representing Kenya allows me to honor my roots and show that dreams can cross borders.
+  - theme: Perseverance
+    text: Every training session, every race, every challenge has taught me that success comes from consistency, resilience, and believing in yourself.
+  - theme: Leadership
+    text: If my journey can inspire even one young person in Kenya, Africa, or anywhere in the world to follow their passion, I will have achieved something meaningful beyond sport.
+featuredQuote: The mountains taught me to aim higher. Today, I ski to represent Kenya, inspire young people, and help write a new chapter in the history of African skiing.
+gallery:
+  - image: /images/athletes/issa-laborde-action-2.jpg
+    alt: Issa Laborde carving a giant slalom turn
+  - image: /images/athletes/issa-laborde-action-3.jpg
+    alt: Issa Laborde racing in Kenyan colors
+  - image: /images/athletes/issa-laborde-olympics.jpg
+    alt: Issa Laborde at the Milano Cortina 2026 Winter Olympics
+order: 1
+isPublished: true

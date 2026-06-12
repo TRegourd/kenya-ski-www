@@ -1,13 +1,21 @@
 heroTitle: About the Kenya Ski Federation
-heroSubtitle: The official governing body dedicated to developing winter sports talent in Kenya and representing our nation on the global stage.
-mission: "To identify, train, and support Kenyan athletes in Alpine and Nordic skiing disciplines, fostering a culture of excellence and sportsmanship that inspires the next generation of winter olympians. We are committed to providing world-class training facilities, expert coaching, and pathways for our athletes to compete at the highest international levels. Through our efforts, we aim to put Kenya on the map as a formidable contender in winter sports, challenging stereotypes and breaking barriers.\n\nOur mission extends beyond the slopes. We strive to build a community that values discipline, resilience, and the relentless pursuit of greatness. By engaging with youth and promoting winter sports within Kenya and the diaspora, we are cultivating a legacy that will endure for generations to come."
+heroSubtitle: Founded by athletes, built for the future — the official governing body developing winter sports in Kenya and representing our nation on the world stage.
+foundation: "The Kenya Ski Federation (KSF) was established in December 2024, answering a call from active Kenyan winter sports athletes and a growing diaspora for a structured national governing body.\n\nFor years, Kenyans competed internationally despite limited resources, infrastructure, and support. The Federation exists to change that — providing leadership, coordination, and athlete support, so that talented young athletes have a pathway to discover, develop, and pursue winter sports, wherever they live.\n\nUnder the leadership of President Philip Boit, a pioneer of Kenyan winter sports, the KSF is affiliated with the International Ski and Snowboard Federation (FIS) and works closely with the National Olympic Committee of Kenya (NOC-K). With a growing network of athletes, coaches, clubs, and supporters across Kenya and the diaspora, the Federation is building on the legacy of those who first carried our flag onto the snow."
+programsIntro: We are building a sustainable winter sports ecosystem — connecting Kenyan athletes with the global winter sports community while laying strong foundations at home.
 programs:
-  - title: Training Programs
-    description: Comprehensive training camps aligned with FIS standards for elite and developmental skiers. Coaching currently led by the President in Eldoret, expanding to Nairobi.
+  - title: Athlete Development
+    description: International training camps, FIS development programs, and competitive pathways — built through partnerships with federations, clubs, and training centers in established winter sports nations.
     icon: Trophy
-  - title: Youth Engagement
-    description: Introducing winter sports to Kenyan youth through roller skiing training programs.
-    icon: Users
-  - title: Governance & Safety
-    description: Ensuring safe, fair, and ethical participation in all competitions.
-    icon: Shield
+  - title: Diaspora Engagement
+    description: A worldwide network of Kenyan winter sports athletes and professionals — sharing knowledge, mentoring young talent, and connecting clubs at home with the diaspora abroad.
+    icon: Globe
+  - title: Roller Ski Development
+    description: The foundation of cross-country skiing in Kenya. A nationwide program with development hubs in Eldoret, Nairobi, and Kitale — from grassroots participation to international competition.
+    icon: MapPin
+  - title: Coaching Development
+    description: Coaching clinics, certification, and technical exchanges with international partners — building a sustainable local coaching structure for long-term athlete development.
+    icon: GraduationCap
+  - title: Winter Sports Experience
+    description: Direct exposure to snow — training, camps, and competition abroad, opening cross-country, alpine, biathlon, and snowboarding pathways for athletes in Kenya and the diaspora.
+    icon: Snowflake
+vision: Our goal is a sustainable national system that identifies talent, develops athletes and coaches, strengthens international partnerships — and carries Kenya to the highest levels of winter sport, including future Olympic Winter Games.
