@@ -1,0 +1,51 @@
+name: Philip Kimely Boit
+discipline: Cross-Country Skiing
+tagline: Olympic Pioneer · Kenya's First Winter Olympian
+born: 12 December 1971
+basedIn: Eldoret, Kenya
+portrait: /images/athletes/philip-boit-profile.jpg
+actionImage: /images/athletes/philip-boit-hero.jpg
+shortBio: A middle-distance runner from Eldoret who had never seen snow, Philip Boit became the first Kenyan ever to compete at a Winter Olympics, a three-time Olympian and three-time flag bearer who opened the door for every Kenyan winter athlete who followed.
+profile: "Philip Kimely Boit was born in 1971 in Eldoret, the Kenyan region famous for the world's greatest distance runners. He began as a middle-distance athlete in the 800m and 1500m, inspired by his uncle, Olympic bronze medallist Mike Boit.\n\nIn 1996 his life changed course: Nike selected him for a bold project to turn Kenyan endurance runners into cross-country skiers. Having never seen snow, Philip travelled to Finland to learn an entirely unfamiliar sport. Just two years later he made history as the first Kenyan ever to compete at the Winter Olympic Games, opening the door for generations of Kenyan winter athletes to come."
+journey: "Philip's move from athletics to cross-country skiing was unlike anything seen in international sport. Arriving in Finland in 1996, he had never experienced snow. \"I kept falling going uphill: the skis were collecting snow. It was like I had put on high-heeled shoes,\" he recalled. It took immense patience and resilience, but he rapidly developed into an international-level skier.\n\nHis career was defined by perseverance. After Nike ended its program in 1999, he faced serious financial and structural barriers, limited access to snow, little support, few competition opportunities, yet still qualified for two further Olympic Games, a reality familiar to athletes from emerging winter sports nations."
+clubs: []
+highlights:
+  - Selected by Nike in 1996 to learn skiing in Finland, having never seen snow
+  - First Kenyan Winter Olympian
+  - Three-time Winter Olympian (Nagano 1998, Salt Lake City 2002, Turin 2006)
+  - Three-time Olympic flag bearer for Kenya
+  - Competed at the FIS Nordic World Ski Championships, Ramsau 1999
+  - Pioneer of cross-country skiing in Kenya
+milestones:
+  - event: Winter Olympic Games — Nagano 1998
+    details:
+      - First Kenyan athlete ever to compete at a Winter Olympics
+      - Flag bearer for Kenya at the Opening Ceremony
+      - Competed in the 10km Classical event
+      - Norwegian legend Bjørn Dæhlie waited at the finish to congratulate him, a moment of Olympic sportsmanship broadcast worldwide
+  - event: Winter Olympic Games — Salt Lake City 2002
+    details:
+      - Competed in the Sprint event
+      - Flag bearer for Kenya, returning as the nation's leading winter athlete
+  - event: Winter Olympic Games — Turin 2006
+    details:
+      - Competed in the 15km Classical event
+      - Flag bearer for Kenya
+      - Completed his third Winter Olympic appearance
+quotes:
+  - theme: Courage
+    text: Sometimes the hardest part is taking the first step into something completely unknown.
+  - theme: Perseverance
+    text: Success is not about where you start. It is about how far you are willing to go.
+  - theme: Opportunity
+    text: I wanted to show that athletes from Kenya could compete anywhere in the world if they were given the chance.
+featuredQuote: I never imagined I would ski at the Olympics. But once the opportunity came, I was determined to see how far I could go.
+gallery:
+  - image: /images/athletes/philip-boit-dahlie.jpg
+    alt: Philip Boit training with Bjørn Dæhlie in the snow
+  - image: /images/athletes/philip-boit-gallery-2.jpg
+    alt: Philip Boit with the Kenyan flag, greeted by Bjørn Dæhlie
+  - image: /images/athletes/philip-boit-gallery-3.jpg
+    alt: Philip Boit racing cross-country before a packed grandstand
+order: 1
+isPublished: true

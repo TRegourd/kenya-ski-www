@@ -213,7 +213,7 @@ export default async function AthletePage({
         {athlete.quotes.length > 0 && (
           <Section className="bg-background">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold">In His Words</h2>
+              <h2 className="text-3xl font-bold">In Their Own Words</h2>
             </div>
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {athlete.quotes.map((quote, idx) => (

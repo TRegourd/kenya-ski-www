@@ -21,5 +21,20 @@ export async function getFAQs() {
   })).then(items => items.sort((a, b) => (a.order || 0) - (b.order || 0)));
 }
 
+export async function getAthleteQuotes() {
+  const athletes = await reader.collections.athletes.all();
+  return athletes
+    .filter((a) => a.entry.isPublished && a.entry.featuredQuote)
+    .sort((a, b) => (a.entry.order || 0) - (b.entry.order || 0))
+    .map((a) => ({
+      slug: a.slug,
+      name: a.entry.name,
+      discipline: a.entry.discipline,
+      portrait: a.entry.portrait,
+      quote: a.entry.featuredQuote,
+    }));
+}
+
 export type HomepageData = Awaited<ReturnType<typeof getHomepageData>>;
 export type FAQEntry = Awaited<ReturnType<typeof getFAQs>>[number];
+export type AthleteQuote = Awaited<ReturnType<typeof getAthleteQuotes>>[number];
