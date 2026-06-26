@@ -1,18 +1,19 @@
-import { getHomepageData, getFAQs } from "@/lib/content/reader"
+import { getHomepageData, getFAQs, getAthleteQuotes } from "@/lib/content/reader"
 import { HeroSection } from "@/components/sections/hero"
 import { PartnersSection } from "@/components/sections/partners"
 import { FeaturesSection } from "@/components/sections/features"
 import { StatsSection } from "@/components/sections/stats"
-import { TestimonialsSection } from "@/components/sections/testimonials"
+import { AthleteQuotesSection } from "@/components/sections/athlete-quotes"
 import { FAQSection } from "@/components/sections/faq"
 import { CTASection } from "@/components/sections/cta"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 
 export default async function Home() {
-  const [data, faqs] = await Promise.all([
+  const [data, faqs, athleteQuotes] = await Promise.all([
     getHomepageData(),
-    getFAQs()
+    getFAQs(),
+    getAthleteQuotes()
   ])
 
 
@@ -37,7 +38,10 @@ export default async function Home() {
           <StatsSection data={data.stats} />
         )}
         
-        <TestimonialsSection data={data.testimonials} />
+        <AthleteQuotesSection
+          title={data.testimonials.title}
+          items={athleteQuotes}
+        />
         
         <FAQSection items={faqs} />
         

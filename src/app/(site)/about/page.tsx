@@ -6,36 +6,44 @@ import { Footer } from "@/components/layout/footer";
 import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
-import { TeamSection } from "@/components/sections/team";
 import { reader } from "@/lib/keystatic";
-import { ArrowRight, Trophy, Users, Shield, Flag } from "lucide-react";
-
-// Map icon strings to components
-const IconMap: Record<string, any> = {
+import {
+  ArrowRight,
   Trophy,
   Users,
   Shield,
   Flag,
+  Globe,
+  MapPin,
+  GraduationCap,
+  Snowflake,
+  type LucideIcon,
+} from "lucide-react";
+
+// Map icon strings to components
+const IconMap: Record<string, LucideIcon> = {
+  Trophy,
+  Users,
+  Shield,
+  Flag,
+  Globe,
+  MapPin,
+  GraduationCap,
+  Snowflake,
 };
 
 export const metadata = {
   title: "About Us | Kenya Ski Federation",
   description:
-    "Learn about the mission, vision, and team behind the Kenya Ski Federation.",
+    "The story, programs, and vision of the Kenya Ski Federation — the official governing body for winter sports in Kenya.",
 };
 
 export default async function AboutPage() {
   const about = await reader.singletons.about.read();
-  const teamMembers = await reader.collections.teamMembers.all();
 
   if (!about) {
     notFound();
   }
-
-  // Sort team members by order
-  const sortedTeam = teamMembers
-    .map((item) => item.entry)
-    .sort((a, b) => (a.order || 0) - (b.order || 0));
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -53,25 +61,29 @@ export default async function AboutPage() {
           </Container>
         </section>
 
-        {/* Mission */}
+        {/* Our Foundation */}
         <Section className="bg-background">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl font-bold text-primary">Our Mission</h2>
-            <div className="prose prose-lg dark:prose-invert mx-auto text-foreground whitespace-pre-wrap">
-              {about.mission}
+          <div className="max-w-4xl mx-auto space-y-6">
+            <h2 className="text-3xl font-bold text-primary text-center">
+              Our Foundation
+            </h2>
+            <div className="prose prose-lg dark:prose-invert mx-auto text-muted-foreground leading-relaxed whitespace-pre-wrap">
+              {about.foundation}
             </div>
           </div>
         </Section>
 
-        {/* Programs */}
+        {/* Programs & Development */}
         <Section className="bg-muted/30">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Programs</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              Programs &amp; Development
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Holistic initiatives designed to build champions and community.
+              {about.programsIntro}
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {about.programs.map((program, idx) => {
               const Icon =
                 program.icon && IconMap[program.icon]
@@ -97,19 +109,49 @@ export default async function AboutPage() {
           </div>
         </Section>
 
-        {/* Team Section */}
-        {process.env.ENABLE_TEAM_MEMBERS !== "false" && (
-          <TeamSection
-            members={sortedTeam.map((member) => ({
-              ...member,
-              avatar: member.avatar ?? undefined,
-              bio: member.bio ?? undefined,
-              linkedinUrl: member.linkedinUrl ?? undefined,
-              email: member.email ?? undefined,
-              quote: member.quote ?? undefined,
-            }))}
-          />
-        )}
+        {/* Long-Term Vision */}
+        <Section className="bg-background">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2 className="text-3xl font-bold">Long-Term Vision</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              {about.vision}
+            </p>
+          </div>
+        </Section>
+
+        {/* Cross-links to Athletes & Team */}
+        <Section className="bg-muted/30">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Link
+              href="/athletes"
+              className="group bg-card border rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <h3 className="text-xl font-semibold mb-2">Our Athletes</h3>
+              <p className="text-muted-foreground mb-4">
+                The skiers carrying Kenya&rsquo;s flag on the international
+                stage.
+              </p>
+              <span className="inline-flex items-center text-sm font-semibold text-primary">
+                Meet the athletes
+                <ArrowRight className="ml-1 size-4 transition-transform group-hover:translate-x-1" />
+              </span>
+            </Link>
+            <Link
+              href="/team"
+              className="group bg-card border rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <h3 className="text-xl font-semibold mb-2">Our Team</h3>
+              <p className="text-muted-foreground mb-4">
+                The executive committee and management behind the Federation.
+              </p>
+              <span className="inline-flex items-center text-sm font-semibold text-primary">
+                Meet the team
+                <ArrowRight className="ml-1 size-4 transition-transform group-hover:translate-x-1" />
+              </span>
+            </Link>
+          </div>
+        </Section>
+
         {/* CTA */}
         <Section className="bg-primary text-primary-foreground text-center">
           <Container>

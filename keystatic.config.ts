@@ -125,23 +125,124 @@ export default config({
       schema: {
         heroTitle: fields.text({ label: "Hero Title" }),
         heroSubtitle: fields.text({ label: "Hero Subtitle", multiline: true }),
-        mission: fields.text({
-          label: "Mission Statement",
+        foundation: fields.text({
+          label: "Our Foundation (story)",
           multiline: true,
         }),
-
+        programsIntro: fields.text({
+          label: "Programs Intro",
+          multiline: true,
+        }),
         programs: fields.array(
           fields.object({
             title: fields.text({ label: "Program Title" }),
             description: fields.text({ label: "Description", multiline: true }),
             icon: fields.text({ label: "Icon Name (Lucide)" }),
           }),
-          { label: "Programs" },
+          {
+            label: "Programs",
+            itemLabel: (props) => props.fields.title.value,
+          },
         ),
+        vision: fields.text({
+          label: "Long-Term Vision",
+          multiline: true,
+        }),
       },
     }),
   },
   collections: {
+    athletes: collection({
+      label: "Athletes",
+      slugField: "name",
+      path: "src/content/athletes/*",
+      schema: {
+        name: fields.slug({ name: { label: "Name" } }),
+        discipline: fields.text({ label: "Discipline" }),
+        tagline: fields.text({
+          label: "Tagline",
+          description: "Short headline, e.g. 'Olympian · Flag Bearer'",
+        }),
+        born: fields.text({ label: "Born (e.g. 12 March 2007)" }),
+        basedIn: fields.text({ label: "Based In" }),
+        portrait: fields.image({
+          label: "Portrait",
+          directory: "public/images/athletes",
+          publicPath: "/images/athletes",
+        }),
+        actionImage: fields.image({
+          label: "Action Photo (profile hero)",
+          directory: "public/images/athletes",
+          publicPath: "/images/athletes",
+        }),
+        shortBio: fields.text({
+          label: "Short Bio (card / listing)",
+          multiline: true,
+        }),
+        profile: fields.text({
+          label: "Profile (intro paragraphs)",
+          multiline: true,
+        }),
+        journey: fields.text({
+          label: "Sporting Journey",
+          multiline: true,
+        }),
+        clubs: fields.array(fields.text({ label: "Club" }), {
+          label: "Ski Clubs",
+          itemLabel: (props) => props.value,
+        }),
+        highlights: fields.array(fields.text({ label: "Highlight" }), {
+          label: "Career Highlights",
+          itemLabel: (props) => props.value,
+        }),
+        milestones: fields.array(
+          fields.object({
+            event: fields.text({ label: "Event" }),
+            details: fields.array(fields.text({ label: "Detail" }), {
+              label: "Details",
+              itemLabel: (props) => props.value,
+            }),
+          }),
+          {
+            label: "Historic Milestones",
+            itemLabel: (props) => props.fields.event.value,
+          },
+        ),
+        quotes: fields.array(
+          fields.object({
+            theme: fields.text({ label: "Theme (e.g. Identity)" }),
+            text: fields.text({ label: "Quote", multiline: true }),
+          }),
+          {
+            label: "Values & Quotes",
+            itemLabel: (props) => props.fields.theme.value,
+          },
+        ),
+        featuredQuote: fields.text({
+          label: "Featured Quote",
+          multiline: true,
+        }),
+        gallery: fields.array(
+          fields.object({
+            image: fields.image({
+              label: "Image",
+              directory: "public/images/athletes",
+              publicPath: "/images/athletes",
+            }),
+            alt: fields.text({ label: "Alt Text" }),
+          }),
+          {
+            label: "Gallery",
+            itemLabel: (props) => props.fields.alt.value,
+          },
+        ),
+        order: fields.number({ label: "Sort Order", defaultValue: 0 }),
+        isPublished: fields.checkbox({
+          label: "Published",
+          defaultValue: true,
+        }),
+      },
+    }),
     teamMembers: collection({
       label: "Team Members",
       slugField: "name",

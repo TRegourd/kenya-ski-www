@@ -88,18 +88,18 @@ export function HeroSection({ data }: HeroSectionProps) {
            <div className="absolute -inset-4 border border-black/5 rounded-[2.5rem] -z-20 dashed" />
 
            <div className="relative aspect-[4/5] w-full rounded-[2rem] overflow-hidden shadow-2xl border border-white/20 select-none">
-              <Image 
+              <Image
                 src="/images/hero/issa-hero.jpeg"
-                alt="Kenyan Alpine Skier in action"
+                alt="Issa Laborde, Kenyan alpine skier, in action"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              
+
               {/* Subtle inner gradient overlay for image depth */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
-              
+
 
            </div>
         </div>

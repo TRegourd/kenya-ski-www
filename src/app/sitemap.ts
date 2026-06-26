@@ -1,7 +1,18 @@
 import { MetadataRoute } from 'next'
+import { reader } from '@/lib/keystatic'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://www.kenyaski.com'
+
+  const athletes = await reader.collections.athletes.all()
+  const athleteUrls = athletes
+    .filter((item) => item.entry.isPublished)
+    .map((item) => ({
+      url: `${baseUrl}/athletes/${item.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }))
 
   return [
     {
@@ -15,6 +26,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/athletes`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    ...athleteUrls,
+    {
+      url: `${baseUrl}/team`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/contact`,

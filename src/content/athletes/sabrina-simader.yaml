@@ -1,0 +1,48 @@
+name: Sabrina Simader
+discipline: Alpine Skiing
+tagline: The "Snow Leopard" · First African Woman in Olympic Alpine Skiing
+born: ""
+basedIn: Born in Kenya · Based in Austria
+portrait: /images/athletes/sabrina-simader-headshot.jpg
+actionImage: /images/athletes/sabrina-simader-action.jpg
+shortBio: Known as the "Snow Leopard," Sabrina Simader is one of the most influential figures in African winter sports, the first African woman to race the Alpine World Cup circuit and to compete in Olympic alpine skiing, now an advocate for the athletes who follow her.
+profile: "Born in Kenya and raised in Austria, Sabrina Simader became a trailblazer for African athletes in alpine skiing. Introduced to the sport as a child by her Austrian stepfather, Josef Simader, she sharpened her skills in one of the world's most competitive skiing environments and, over more than a decade of international racing, established herself as a respected athlete on the global stage while proudly representing Kenya.\n\nAfter announcing her retirement from professional racing in July 2025, Sabrina has turned her attention to athlete development, women's empowerment, coaching, and the long-term growth of winter sports across Africa."
+journey: "Growing up in Austria, Sabrina rose through the competitive ranks as one of the very few African athletes in elite alpine skiing, carrying the responsibility of representing both her country and a continent rarely associated with winter sport.\n\nFollowing PyeongChang 2018 she pursued qualification for Beijing 2022, but financial and logistical barriers ultimately prevented her participation, a stark illustration of the obstacles athletes from emerging winter sports nations face. She is the founder of the African Winter Sports Development Concept, an initiative to expand participation, visibility, and pathways across the continent."
+clubs: []
+highlights:
+  - First African woman to compete on the FIS Alpine Ski World Cup circuit
+  - 23 FIS Alpine Ski World Cup starts
+  - 24 international FIS race victories
+  - 46 international FIS podium finishes
+  - Four-time FIS Alpine World Ski Championships participant
+  - FIS Coaching Certification (Level C)
+milestones:
+  - event: Winter Youth Olympic Games — Lillehammer 2016
+    details:
+      - First African woman to compete in alpine skiing at the Winter Youth Olympic Games
+  - event: Winter Olympic Games — PyeongChang 2018
+    details:
+      - First Kenyan woman and first African woman to compete in Olympic alpine skiing
+      - Raced the Giant Slalom and Super-G disciplines
+      - Proudly carried the Kenyan flag on one of sport's biggest stages
+  - event: Retirement & Legacy — 2025
+    details:
+      - Announced her retirement in July 2025 despite having met the qualification standard for Milano-Cortina 2026
+      - Stepped away from elite sport to advocate for stronger support systems for future athletes
+quotes:
+  - theme: Representing Kenya
+    text: Wearing the Kenyan flag meant carrying the hopes of a nation with little history in alpine skiing. It was both a privilege and a responsibility.
+  - theme: Resilience
+    text: Being a pioneer means facing challenges that others do not see. Every step forward creates opportunities for those who follow.
+  - theme: Advocacy
+    text: I want future athletes to spend more time focusing on performance and less time fighting for the resources needed to compete.
+featuredQuote: The path I opened was never just for me, it was for every young dreamer who dares to follow.
+gallery:
+  - image: /images/athletes/sabrina-simader-gallery-1.jpg
+    alt: Sabrina Simader carving a turn in her leopard-print race suit
+  - image: /images/athletes/sabrina-simader-finish.jpg
+    alt: Sabrina Simader racing in Kenyan colors at Cortina
+  - image: /images/athletes/sabrina-simader-gallery-3.jpg
+    alt: Sabrina Simader tucked in a downhill at speed
+order: 2
+isPublished: true
